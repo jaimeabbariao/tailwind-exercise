@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Heart, CircleNotch } from "@phosphor-icons/react";
 
+// TODO: Button should have a width of 80px with 12px of horizontal padding and 8px of vertical padding
 function LikeButton() {
   const [liked, setLiked] = useState(false);
   const [loading, setLoading] = useState(false);
