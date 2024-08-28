@@ -32,20 +32,18 @@ function LikeButton() {
   );
 }
 
-function Button({
-  onClick,
-  className,
-  children,
-}: React.PropsWithChildren<{ className: string; onClick: () => void }>) {
+function Button(
+  props: React.PropsWithChildren<{ className: string; onClick: () => void }>,
+) {
   return (
     <button
       className={cn(
         "flex flex-row justify-between items-center w-20 px-3 py-2",
-        className,
+        props.className,
       )}
-      onClick={onClick}
+      onClick={props.onClick}
     >
-      {children}
+      {props.children}
     </button>
   );
 }
